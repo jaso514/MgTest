@@ -18,7 +18,6 @@
 !/php.ini
 !/update
 !/update/.htaccess
-!/README.md
 !/op-exclude.txt
 !/patches
 !/pub/.htaccess

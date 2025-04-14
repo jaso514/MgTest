@@ -4,6 +4,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'MgTest_Test',
+    'MgTest_FirstNameManager',
     __DIR__
 );
