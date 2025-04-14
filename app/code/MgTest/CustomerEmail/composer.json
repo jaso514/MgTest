@@ -1,0 +1,20 @@
+{
+    "name": "mmgtest/module-customerEmail",
+    "description": "n/a",
+    "require": {
+        "php": "^8.2.0 || ^8.3.0"
+    },
+    "version": "1.0.0",
+    "type": "magento2-module",
+    "license": [
+        "community"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MgTest\\CustomerLogger\\": ""
+        }
+    }
+}

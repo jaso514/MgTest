@@ -1,0 +1,9 @@
+<!--@subject New Customer Registration @-->
+{{template config_path="design/email/header_template"}}
+<div style="border:1px solid #d6d6d6; padding:10px;">
+    <p>The customer {{var customer_name}} has registered:</p>
+    <p><strong>Name:</strong> {{var customer_name}}</p>
+    <p><strong>Email:</strong> {{var customer_email}}</p>
+    <p>Please confirm the information in the admin panel.</p>
+</div>
+{{template config_path="design/email/footer_template"}}
