@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="MgTest\CustomerLogger\Logger\Handler\CustomerLogger">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/customer.log</argument>
+        </arguments>
+    </type>
+
+    <type name="MgTest\CustomerLogger\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">MgTest_CustomerLogger</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="system" xsi:type="object">MgTest\CustomerLogger\Logger\Handler\CustomerLogger</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

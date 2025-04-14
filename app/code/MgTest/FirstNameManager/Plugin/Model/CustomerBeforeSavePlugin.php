@@ -29,11 +29,14 @@ class CustomerBeforeSavePlugin
      */
     public function beforeSave(Customer $subject)
     {
-        $firstname = $subject->getFirstname();
+        if ($subject->isObjectNew())
+        {
+            $firstname = $subject->getFirstname();
 
-        $firstname = strpos($firstname, ' ')!==false ? 
-                strstr($firstname, ' ', true): $firstname;
-        $subject->setFirstname($firstname);
-
+            $firstname = strpos($firstname, ' ')!==false ? 
+                    strstr($firstname, ' ', true): $firstname;
+            $subject->setFirstname($firstname);
+            $this->logger->info($subject->isObjectNew() ? 'Customer creation' : 'Customer updating');
+        }
     }
 }
